@@ -1,0 +1,315 @@
+<!DOCTYPE html >
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/peasonalpractise.css"/>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script type="text/javascript" src="js/personalpractise.js"></script>
+   
+<title>我的小练习</title>
+
+</head>
+<body >
+
+<div id="main">
+<div id="header">
+  <div class="img_div"><img src="image/newlang.PNG"></div>
+  <div class="a_div">
+  <div  class="a_one">登录</div>
+    <div  class="a_three">注册</div>
+  <div  class="a_two">个人中心
+  <img class="first_up" src="image/down.png">
+   <ul id="ul_li">
+	   <li class="li_ul"><a href="#">发文</a></li>
+	   <li class="li_ul"><a href="#">换肤</a></li>
+	   <li class="li_ul"><a href="#">帮助</a></li>
+	   <li class="li_ul"><a href="#">退出</a></li>
+	</ul>
+  </div>
+   </div>
+</div>
+<div id="reg">
+<h2><img src="image/bihuo.PNG" class="close"/>会员注册</h2>
+<form name="reg" id="regist">
+<dl>
+  <dd>用　户　名：<input type="text" name="user" class="text"/>
+      <span class="info info_user">请输入用户名6~20位，由字母、数字、下划线组成！</span>
+       <span class="error error_user">输入不合法，请重新输入</span>
+	   <span class="succ succ_user">你输入的内容可用</span>
+  </dd>
+  <dd>密　　　码：<input type="password" name="pass" class="text"/>
+      <span class="info info_pass">
+	  <p>安全级别：<strong class="s s1">■</strong><strong class="s s2">■</strong><strong class="s s3">■</strong><strong class="s s4"></strong></p>
+	  <p><strong class="q1" id="q1">○</strong><a>6-20个字符</a></p>
+	  <p><strong class="q1" id="q2">○</strong><a>只能包含大小写字母、数字、非空格字符</a></p>
+	  <p><strong class="q1" id="q3">○</strong><a>大、小写字母、数字、非空字符，2种以上</a></p>
+      </span>
+       <span class="error error_pass">输入不合法，请重新输入</span>
+	   <span class="succ succ_pass">你输入的内容可用</span>
+  </dd>
+  
+  <dd>密码　确认：<input type="password" name="notpass" class="text"/>
+       <span class="info info_notpass">请再次输入密码</span>
+       <span class="error error_notpass">密码不一致，请重新输入</span>
+	   <span class="succ succ_notpass">你输入的内容可用</span>
+  </dd>
+  <dd>提　　　问：<select name="question" class="selectone">
+                   <option value="0">----请选择----</option>
+				   <option value="1">----您最喜欢吃的菜----</option>
+				   <option value="2">----你的运动----</option>
+				   <option value="3">----出生地----</option>
+                   <option value="4">----明星专辑----</option>
+				   </select>
+				   <span class="error error_select">还未选择，请选择</span>
+				   </dd>
+	<dd>回　　　答：<input type="text" name="ans" class="text"/>
+	    <span class="info info_ans">请输入回答，2~32位</span>
+       <span class="error error_ans">输入不合法，请重新输入</span>
+	   <span class="succ succ_ans">你输入的内容可用</span>
+	</dd>
+    <dd>电子　邮件：<input type="text" name="email" class="text" autocompete="off"/><!--有的会自动缓存该属性就是用来消除缓存-->
+	  <span class="info info_email">请输入电子邮件</span>
+       <span class="error error_email">邮件不正确，请重新输入</span>
+	   <span class="succ succ_email">你输入的内容可用</span>
+	   <ul class="all_email">
+	   <li><span></span>@qq.com</li>
+	   <li><span></span>@163.com</li>
+	   <li><span></span>@sohu.com</li>
+	   <li><span></span>@sina.com.cn</li>
+	   </ul>
+	</dd>
+    <dd class="birthday">生　　　日：
+					 <select name="year" >               
+                     </select> 年
+                <select name="month">               
+                </select> 月
+                <select name="day">               
+                </select> 日
+				 <span class="error error_birthday">请核对你的生日是否正确</span>
+					 </dd>
+    
+	<dd style="height:105px"><span style="vertical-align:85px;">备　　　注：</span>
+	<textarea name="ps" class="textps"></textarea></dd>
+    <dd style="display:block;" class="ps">还能输入<strong class="explnum">100</strong>字</dd>
+    <dd style="display:none;" class="ps">已超过<strong class="explnum"></strong>字，<span class="spanclear">清尾</span></dd>	
+	<dd style="padding:0 0 0 80px;"><input type="button" class="button_sumit"/></dd>	
+</dl>
+</form>
+</div>
+<div id="login">
+ <h2><img src="image/bihuo.PNG" class="ingag">网站登录</h2>
+ <form name="loginform" id="loginform">
+ <div class="warning"></div>
+ <div class="count_numb">账号：<input type="text" name="numb"/></div>
+ <div class="psw">密码：<input type="password" name="pswd"/></div>
+ <div id="loading">
+   <p>登录中...</p>
+</div>
+<div id="success">
+<p>成功</p>
+</div>
+ <div class="btn"><input type="button" value="" name="bton" class="btnleft"/></div>
+ <div class="div_a"><a>注册新用户|忘记密码？</a></div>
+ </form>
+ </div>
+ <div id="article">
+ <h2><img src="image/bihuo.PNG" class="close"/>发表博文</h2>
+<form name="blog" id="blog">
+<dl>
+  <dd class="tip"><span><span></dd>
+  <dd>标　　题：<input type="text" name="title" class="title"/>
+  <span>（*不为空）</span>
+  </dd>
+  <dd style="height:105px">
+  <span style="vertical-align:85px;">内　　容：</span>
+	<textarea class="contentarea" name="contentarea"></textarea><span>（*不为空）</span>
+	</dd>
+	<div id="publicing">
+       <p>发表中...</p>
+    </div>
+    <div id="pubsuccess">
+       <p></p>
+    </div>
+    <dd style="padding:0 0 0 70px;">
+	<input type="button" class="articlebtn" name="articlebtn"/>
+	</dd>	
+</dl>
+</form>
+</div>
+
+<div id="nav">
+	<ul class="blank">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul class="black">
+		<li>首页</li>
+		<li>博文列表</li>
+		<li>精彩相册</li>
+		<li>动感音乐</li>
+		<li>关于我</li>
+	</ul>
+	<div class="nav_bg">
+		<ul class="white">
+			<li>首页</li>
+			<li>博文列表</li>
+			<li>精彩相册</li>
+			<li>动感音乐</li>
+			<li>关于我</li>
+		</ul>
+	</div>
+</div>
+ <div id="middle">
+	 <div class="sidebar">
+	 <h2>最新消息1</h2>
+	 <ul>
+	   <li><a href="#">小年备好礼 年货美食满99减50</a></li>
+	   <li><a href="#">华北区因雨雪天气配送延迟</a></li>
+	   <li><a href="#">京东全球年货节礼盒买一送一</a></li>
+	   <li><a href="#">森马年中促满300减50</a></li>
+	   <li><a href="#">双胞胎兄弟双双考入北大</a></li>
+	</ul>
+	 <h2>最新消息2</h2>
+	 <ul>
+	   <li><a href="#">小年备好礼 年货美食满99减50</a></li>
+	   <li><a href="#">华北区因雨雪天气配送延迟</a></li>
+	   <li><a href="#">京东全球年货节礼盒买一送一</a></li>
+	   <li><a href="#">森马年中促满300减50</a></li>
+	   <li><a href="#">双胞胎兄弟双双考入北大</a></li>
+	</ul>
+	 <h2>最新消息3</h2>
+	 <ul>
+	   <li><a href="#">小年备好礼 年货美食满99减50</a></li>
+	   <li><a href="#">华北区因雨雪天气配送延迟</a></li>
+	   <li><a href="#">京东全球年货节礼盒买一送一</a></li>
+	   <li><a href="#">森马年中促满300减50</a></li>
+	   <li><a href="#">双胞胎兄弟双双考入北大</a></li>
+	</ul>
+	 </div>
+	 <div class="index">
+	 <span>
+	
+	 </span>
+	   	 </div>
+	 <div id="banner">
+	  <img src="image/img5.png" alt="获得第一张图片"/><!--三张图片不在同一个层次做成同一个层次-->
+	  <img src="image/img6.png" alt="获得第二张图片"/>
+	  <img src="image/img7.png" alt="获得第三张图片"/>
+	  <ul>
+	   <li class="banner1">●</li>
+	   <li class="banner2">●</li>
+	   <li class="banner3">●</li>
+	  </ul>
+	   <span>半透明黑条</span>
+	   <strong>图片说明</strong>
+	 </div>
+	 <div id="photo">
+	   <dl class="hightmoun">
+	      <dt><img src="image/wait.png" xsrc="image/1.png" class="wait"></dt>
+	     <dd>图片1</dd>
+	   </dl>
+	   <dl>
+	       <dt><img src="image/wait.png" xsrc="image/2.png" class="wait"></dt>
+	     <dd>图片2</dd>
+	   </dl>
+	   <dl>
+	      <dt><img src="image/wait.png" xsrc="image/3.png" class="wait"></dt>
+	     <dd>图片3</dd>
+	   </dl>
+	   <dl>
+	      <dt><img src="image/wait.png" xsrc="image/4.png" class="wait"></dt>
+	     <dd>图片4</dd>
+	   </dl>
+	   <dl class="hightmoun">
+	      <dt><img src="image/wait.png" xsrc="image/1.png" class="wait"></dt>
+	     <dd>图片5</dd>
+	   </dl>
+	   <dl>
+	       <dt><img src="image/wait.png" xsrc="image/2.png" class="wait"></dt>
+	     <dd>图片6</dd>
+	   </dl>
+	   <dl>
+	      <dt><img src="image/wait.png" xsrc="image/3.png" class="wait"></dt>
+	     <dd>图片7</dd>
+	   </dl>
+	   <dl>
+	      <dt><img src="image/wait.png" xsrc="image/4.png" class="wait"></dt>
+	     <dd>图片8</dd>
+	   </dl>
+	   <dl class="hightmoun">
+	      <dt><img src="image/wait.png" xsrc="image/1.png" class="wait"></dt>
+	     <dd>图片9</dd>
+	   </dl>
+	   <dl>
+	       <dt><img src="image/wait.png" xsrc="image/2.png" class="wait"></dt>
+	     <dd>图片10</dd>
+	   </dl>
+	   <dl>
+	      <dt><img src="image/wait.png" xsrc="image/3.png" class="wait"></dt>
+	     <dd>图片11</dd>
+	   </dl>
+	   <dl>
+	      <dt><img src="image/wait.png" xsrc="image/4.png" class="wait"></dt>
+	     <dd>图片12</dd>
+	   </dl><dl class="hightmoun">
+	      <dt><img src="image/wait.png" xsrc="image/1.png" class="wait"></dt>
+	     <dd>图片13</dd>
+	   </dl>
+	   <dl>
+	       <dt><img src="image/wait.png" xsrc="image/2.png" class="wait"></dt>
+	     <dd>图片14</dd>
+	   </dl>
+	   <dl>
+	      <dt><img src="image/wait.png" xsrc="image/3.png" class="wait"></dt>
+	     <dd>图片15</dd>
+	   </dl>
+	   <dl>
+	      <dt><img src="image/wait.png" xsrc="image/4.png" class="wait"></dt>
+	     <dd>图片16</dd>
+	   </dl>
+	  
+	 </div>
+ </div>
+ 
+ <div id="share">
+ <h2>分享到</h2>
+ <ul class="share_middle">
+ <li><a href="###" class="a">一键分享</a></li>
+ <li><a href="###" class="b">新浪微博</a></li>
+ <li><a href="###" class="c">人人网</a></li>
+ <li><a href="###" class="d">百度相册</a></li>
+ <li><a href="###" class="e">腾讯朋友</a></li>
+ <li><a href="###" class="f">豆瓣网</a></li>
+ <li><a href="###" class="g">百度新首页</a></li>
+ <li><a href="###" class="h">和讯微博</a></li>
+ <li><a href="###" class="i">QQ空间</a></li>
+ <li><a href="###" class="g">百度搜藏</a></li>
+ <li><a href="###" class="k">腾讯微博</a></li>
+ <li><a href="###" class="l">开心网</a></li>
+ <li><a href="###" class="m">百度贴吧</a></li>
+ <li><a href="###" class="n">搜狐微博</a></li>
+ <li><a href="###" class="o">QQ好友</a></li>
+ <li><a href="###" class="p">更多...</a></li>
+ 
+ </ul>
+ <div class="share_footer"><a href="##">百度分享</a><span></span></div>
+ </div>
+</div>
+
+<div id="screen"></div>
+
+<div id="import"></div>
+
+
+
+
+
+
+
+
+</body>
+</html>

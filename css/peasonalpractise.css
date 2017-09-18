@@ -1,0 +1,902 @@
+*{
+	margin:0;
+	padding:0;
+}
+ul,ol{
+	list-style:none;
+}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+body{
+	
+	font-size:12px;
+	font-family:宋体;
+	color:#333;
+	
+	
+}
+#header{
+	width:100%;
+	height:26px;
+	background:#ccc;
+	border:#999 solid 1px;
+}
+#header .img_div{
+	margin:0 6%;
+	float:left;
+} 
+#header .a_div{
+  
+	height:26px;
+	margin:3px 7% ;
+	float:right;
+ }
+
+#header .a_div div{
+   color:black;
+   font-size:14px;
+  margin:0 2px;
+}
+#header .a_div .a_one,#header .a_div .a_three {
+	width:30px;
+	padding-top:1px;
+	float:left;
+}
+#header .a_div .a_two{
+	float:right;
+	
+}
+#header .a_div .first_up{
+	margin-right:20px;
+   
+	
+}
+#header #ul_li{
+	padding:0;
+	margin-top:8px;
+	background:#FBF7E1;
+	width:100px;
+	height:110px;
+	border:1px solid #999;
+	border-top:none;
+	list-style:none;
+	display:none;
+	
+}
+
+
+#header  #ul_li a{
+	height:25px;
+	line-height:25px;
+	text-indent:20px;  
+	letter-spacing:1px;
+	list-style:none;
+	background:url(../image/right.png)no-repeat;
+	display:block;
+	width:100%;
+	filter:alpha(opacity=0);
+	opacity:0;/*火狐谷歌*/
+}
+#header  #ul_li a:hover{
+	text-decoration:none;
+	background:#fc0 url(../image/right.png)no-repeat;
+		list-style:none;
+}
+
+#screen{
+	position:absolute;
+	top:0;
+	left:0;
+    background:#000;
+	z-index:9998;/*设置这么高就可以使header也遮罩*/
+	filter:alpha(opacity=30);
+	opacity:0.3;/*火狐谷歌*/
+	display:none;
+	
+}
+#reg{
+	width:600px;
+	height:550px;
+	border:1px solid #ccc;
+    display:none;
+   z-index:9999;
+	background:#fff;
+	cursor:move;
+	margin:0 auto;
+	
+}
+#reg h2{
+	background-image:url(../image/sider.png);
+	background-size:contain;
+	line-height:35px;
+     height:35px;
+	 text-align:center;
+	 font-size:14px;
+	 color:#666;
+	
+	}
+#reg h2 .close{
+	float:right;
+	margin:8px 3px;
+}
+#reg dl{
+	font-size:14px;
+	color:#666;
+	margin:20px;
+	padding:0 0 0 10px;
+	position:relative;
+	
+}
+#reg dl dd{
+	height:30px;
+	padding:5px 0;
+}
+#reg dl dd input.text,#reg dl dd select{
+	width:200px;
+	height:25px;
+	border:1px solid #ccc;
+	background:#fff;
+	font-size:14px;
+}
+/*共有属性*/
+#reg dl dd .info,#reg dl dd .error,#reg dl dd .succ{
+	color:#333;
+	background: url(../image/222.png)no-repeat;
+	width:165px;
+	height:32px;
+	line-height:32px;
+	padding:0 0 0 35px;
+	font-size:12px;
+	
+	position:absolute;
+	
+	display:none;
+	
+} 
+/*每个自己独有属性*/
+#reg dl dd .info_user{
+	height:43px;
+	line-height:18px;
+	padding-top:7px;
+	top:3px;
+	left:310px;
+	background: url(../image/111.png)no-repeat;
+	
+}
+#reg dl dd .succ_user{
+	height:16px;
+	line-height:16px;
+   background:  url(../image/success.png)no-repeat;
+	top:5px;
+	left:310px;
+	color:green;
+
+
+	}
+#reg dl dd .error_user{
+	top:3px;left:310px;
+	background: url(../image/red.png)no-repeat;
+
+	}
+/*上面几处需要再三斟酌*/
+#reg dl dd .error_pass{
+	top:43px;
+	left:310px;
+	background: url(../image/red.png)no-repeat;
+	}
+#reg dl dd .succ_pass{
+	top:47px;
+	left:310px;
+	height:16px;
+	line-height:16px;
+	background:url(../image/success.png)no-repeat;
+	
+	color:green;}
+#reg dl dd .error_notpass{
+	top:83px;
+	left:310px;
+	background: url(../image/red.png)no-repeat;
+	
+	}
+#reg dl dd .succ_notpass{
+	top:87px;
+	left:310px;
+	height:16px;
+	line-height:16px;
+	background:url(../image/success.png)no-repeat;
+	color:green;}
+#reg dl dd .info_notpass{
+	top:83px;
+	left:310px;
+	background:url(../image/222.png)no-repeat;
+}	
+#reg dl dd .error_ans{
+	top:163px;
+	left:310px;
+	background: url(../image/red.png)no-repeat;
+
+	}
+#reg dl dd .succ_ans{
+	top:167px;
+	left:310px;
+	height:16px;
+	line-height:16px;
+	background:url(../image/success.png)no-repeat;
+	color:green;
+	}
+#reg dl dd .info_ans{
+	top:163px;
+	left:310px;
+	background:url(../image/222.png)no-repeat;
+}	
+#reg dl dd .error_email{
+	top:203px;
+	left:310px;
+	background: url(../image/red.png)no-repeat;
+	
+	}
+#reg dl dd .succ_email{
+	top:207px;
+	left:310px;
+	height:16px;
+	line-height:16px;
+	background:url(../image/success.png)no-repeat;
+		
+	color:green;}
+#reg dl dd .info_email{
+	top:203px;
+	left:310px;
+
+}	
+#reg dl dd .error_birthday{
+	top:243px;
+	left:365px;
+	background: url(../image/222.png)no-repeat;
+	}
+#reg dl dd .info_pass{
+	
+	background:url(../image/squer.png)no-repeat;
+	width:262px;
+	height:108px;
+	line-height:25px;
+	left:310px;
+	top:5px;
+	padding:0 0 0 13px;
+}
+#reg dl dd .error_select{
+	top:123px;
+	left:310px;
+	background: url(../image/red.png)no-repeat;
+}
+#reg dl dd .info_pass p{
+	height:25px;
+	line-height:25px;
+	color:#666;
+}
+#reg dl dd .info_pass p .s{
+	color:#ccc;
+	
+}
+#reg dl dd .info_pass p .q1{
+	font-family:normal;
+	height:28px;
+	display:block;
+	font-size:24px;
+}
+#reg dl dd .info_pass p a{
+	display:block;
+	margin:-26px 0 0 20px;
+	text-decoration:none;
+}
+
+#reg dl dd select{width:204px;}
+#reg dl .birthday select{width:60px;}
+#reg dl dd textarea{
+	border:1px solid #ccc;
+	width:360px;
+	height:100px;
+	background:#fff;
+	
+}
+#reg dl dd.ps{
+	padding:0 0 0 320px;
+}
+#reg dl dd.explnum{
+	padding:0 2px;
+}
+#reg dl dd.clear{
+	color:#06f;
+	cursor:pointer;
+}
+#reg dl dd input.button_sumit{
+	width:143px;
+	height:33px;
+	background:url(../image/reg.png)no-repeat;
+	border:none;
+	cursor:pointer;
+}
+#reg dl dd ul.all_email{
+	width:180px;
+	height:130px;
+	background:#fff;
+	padding:5px 10px;
+	position:absolute;
+	top:232px;
+	left:94px;
+	border:1px solid #ccc;
+	display:none;
+}
+#reg dl dd ul.all_email li{
+	height:25px;
+	line-height:25px;
+	border-bottom:1px solid #e5edf2;
+	padding:0 5px;
+	cursor:pointer
+}
+#login{
+	width:300px;
+	height:200px;
+	border:1px solid gray;
+    display:none;
+    z-index:9999;
+	background:#fff;
+	cursor:move;
+	
+}
+#login .warning{
+	width:100%;
+	height:10px;
+	padding:5px 0 5px 0;
+	text-align:center;
+	color:red;
+	
+}
+#login h2{
+	   height:35px;
+	line-height:35px;
+    text-align:center;
+	 font-size:14px;
+	 color:#666;
+	 background-image:url(../image/sider.png);
+	 background-size:contain;
+
+	}
+#login input{
+	width:200px;
+	height:25px;
+}	
+#login h2 .ingag{
+	float:right;
+	margin:8px 3px;
+}
+#login .count_numb{
+	
+	margin:5px 5px 10px 20px;
+	font-size:18px;
+	
+}
+#login .psw{
+	margin:0 10px 14px 20px;
+	font-size:18px;
+}
+#login .btn{
+	margin-left:100px;
+	
+	font-size:18px;
+	
+	
+}
+#login .btnleft{
+	
+	
+	width:107px;
+	height:30px;
+	background:url(../image/log.png)no-repeat left;
+	border:1px solid black;
+	border-left:0;
+	border-radius:3px;
+	
+	
+}
+#login .btnright{
+	width:107px;
+	height:30px;
+	background:url(../image/log.png)no-repeat right;
+	border:1px solid black;
+	border-right:0;
+	border-radius:3px;
+}
+#login .div_a{
+	float:right;
+	margin-top:8px;
+	
+}
+#login .div_a a{
+	text-decoration:none;
+}
+#article{
+	width:580px;
+	height:300px;
+	border:1px solid #ccc;
+    display:none;
+    z-index:9999;
+	background:#fff;
+	cursor:move;
+	
+	position:absolute;
+}
+#article h2{
+	background-image:url(../image/sider.png);
+	background-size:contain;
+	line-height:35px;
+     height:35px;
+	 text-align:center;
+	 font-size:14px;
+	 color:#666;
+	
+	}
+#article h2 .close{
+	float:right;
+	margin:8px 3px;
+}
+#article dl{
+	font-size:14px;
+	color:#666;
+	margin:10px;
+	padding:0 0 0 10px;
+	position:relative;
+	
+}
+#article dl dd{
+	height:30px;
+	padding:5px 0;
+}
+#article  dl dd.tip{
+	
+	width:100%;
+	height:25px;
+	text-align:center;
+	color:red;
+	margin:0;
+	padding:0;
+}
+#article dl dd input.title{
+	width:200px;
+	height:25px;
+	border:1px solid #ccc;
+	background:#fff;
+	font-size:14px;
+}
+#article dl dd textarea{
+	border:1px solid #ccc;
+	width:300px;
+	height:100px;
+	background:#fff;
+	margin-left:-6px;
+	
+}
+#article dl dd input.articlebtn{
+	width:143px;
+	height:33px;
+	background:url(../image/pub1.png)no-repeat;
+	border:none;
+	cursor:pointer;
+	margin-top:23px;
+}
+#article dl dd input.artbtnright{
+	width:143px;
+	height:33px;
+	background:url(../image/pub2.png)no-repeat;
+	border:none;
+	cursor:pointer;
+	margin-top:23px;
+}
+#publicing,#pubsuccess{
+	position:absolute;
+	width:200px;
+	height:20px;
+	background:url(../image/loading.png);
+	border:1px solid black;
+	z-index:10000;
+	top:100px;
+	left:200px;
+	display:none;
+	
+}
+
+##publicing p,#pubsuccess p{
+	height:40px;
+	line-height:20px;
+	font-size:14px;
+	color:#666;
+	font-weight:bold;
+	text-indent:30px;
+	
+	
+	}
+#middle{
+	width:90%;
+	margin:4% auto;/*这个布局不错可以加个背景颜色高度看看*/
+	
+}
+#middle .sidebar{
+	width:28%;
+	height:570px;
+    
+	float:left;
+}
+#middle .sidebar h2{
+	width:99.4%;
+	height:30px;
+	line-height:30px;
+	 text-indent:10px;
+	background:url(../image/sider.png);
+	background-size:contain;
+	font-size:14px;
+	border:1px solid #ccc;
+	border-bottom:none;
+}
+.sidebar ul{
+	height:26.1%;
+	border:1px solid #ccc;
+	margin:0 0 10px 0;
+	
+}
+.sidebar ul li{
+	height:30px;
+	line-height:30px;
+	text-indent:30px;
+	background:url(../image/right2.png)no-repeat 10px center;
+	
+}
+.sidebar ul li a{
+	text-decoration:none;
+	color:#333;
+}
+#middle .index{
+	width:70%;
+	height:566px;
+	float:right;
+
+}
+#middle .index span{
+	display:block;
+    width:328px;
+	height:160px;
+	margin:200px auto;
+	background:url(../image/quickload.gif)no-repeat;
+	}
+#middle .index h2{
+	width:99.8%;
+	height:29px;
+	line-height:30px;
+	 text-indent:10px;
+	background:url(../image/sider.png);
+	background-size:contain;
+	font-size:14px;
+	border:1px solid #ccc;
+	border-bottom:none;
+}
+#middle .index h2 em{
+	float:right;
+	margin-right:10px;
+	font-style:normal;
+	font-weight:normal;
+}
+#middle .index div{
+	height:26.3%;
+	border:1px solid #ccc;
+	margin:0 0 10px 0;
+	
+}
+#banner{
+	width:100%;
+	height:150px;
+	float:left;
+	margin:10px 0;
+	position:relative;
+	
+}
+/*
+  1.不显示的图片  index
+  2.显示滑动的图片   在js中控制
+  3.黑条 span 
+  4.文字和黑点  ul  strong
+*/
+#banner img{
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+}
+#banner ul{
+	position:absolute;
+	top:128px;
+	left:550px;
+	z-index:4;
+}
+#banner ul li{
+	float:left;
+	padding:0 5px;
+	color:#999;
+	cursor:pointer;
+	font-size:16px;
+}
+#banner span{
+	display:block;
+	width:100%;
+	height:25px;
+	background:#333;
+	position:absolute;
+	top:125px;
+	left:0;
+	opacity:0.3;
+	filter:alpha(opacity=30);
+	z-index:3;
+}
+#banner strong{
+	position:absolute;
+	top:130px;
+	left:10px;
+	color:#fff;
+	z-index:4;
+	
+}
+#photo{
+	width:100%;
+	height:281px;
+	float:left;
+	
+}
+#photo dl{
+	width:201px;
+	height:281px;
+	display:inline-block;
+	margin:8px 10px;
+}
+#photo dl.hightmoun{
+	padding:0 0 0 14px;
+}
+#photo dl dt img.wait{
+	
+	opacity:0;
+	filter:alpha(opacity=0);
+	
+}
+#photo dl dt{
+	width:201px;
+	height:251px;
+	
+}
+#photo dl dd{
+	width:201px;
+	height:30px;
+	margin:4px 90px;
+}
+#share{
+	width:210px;
+	height:315px;
+    background:#fff;
+	border:1px solid #ccc;
+	position:absolute;
+	top:0px;
+	left:-213px;
+	
+}
+#share h2{
+	height:30px;
+	line-height:30px;
+	background:#eee;
+	text-indent:5px;
+	font-size:14px;
+	color:#666;
+	
+}
+#share .share_middle{
+   height:255px;
+   list-style:none;
+   margin:0;
+   padding:0;
+	
+}
+#share .share_middle li{
+	width:96px;
+	height:28px;
+	padding:2px;
+	float:left;
+	
+}
+#share .share_middle a{
+	color:#666;
+	font-size:12px;
+	text-decoration:none;
+	display:block;
+	width:95px;
+	height:28px;
+	background-image: url(../image/picture.png);
+	background-repeat:no-repeat;
+	
+	text-indent:30px;
+}
+#share .share_middle a:hover{
+	opacity:0.7;
+	filter:alpha(opacity=70);
+}
+#share .share_middle a.a{
+	
+	background-position:5px  1px;
+	height:17px;
+}
+#share .share_middle a.b{
+	background-position:5px -30px;/*-28px*/
+	height:16px;
+}
+#share .share_middle a.c{
+	background-position:5px -60px;
+	height:16px;
+}
+#share .share_middle a.d{
+	background-position:5px -90px;/*86*/
+    height:16px;
+	}
+#share .share_middle a.e{
+	background-position:5px -120px;
+	height:16px;
+}
+#share .share_middle a.f{
+	background-position:5px -150px;
+	height:16px;
+}
+#share .share_middle a.g{
+	background-position:5px -180px;
+	height:16px;
+}
+#share .share_middle a.h{
+	background-position:5px -210px;
+	height:16px;
+}
+#share .share_middle a.i{
+	background-position:5px -241px;
+	height:16px;
+}
+#share .share_middle a.j{
+	background-position:5px -266px;
+	height:16px;
+}
+#share .share_middle a.k{
+	background-position:5px -301px;
+	height:16px;
+}
+#share .share_middle a.l{
+	background-position:5px -331px;
+	height:16px;
+}
+#share .share_middle a.m{
+	background-position:5px -361px;
+	height:16px;
+}
+#share .share_middle a.n{
+	background-position:5px -391px;
+	height:16px;
+}
+#share .share_middle a.o{
+	background-position:5px -421px;
+	height:16px;
+}
+#share .share_middle a.p{
+	background-position:5px -450px;
+	height:15px;
+}
+
+#share .share_footer{
+	height:30px;
+	background:#eee;
+	position:relative;
+}
+#share .share_footer a{
+	text-decoration:none;
+	background:#eee url(../image/pictu.png) no-repeat ;
+	position:absolute;
+	top:7px;
+	left:140px;
+	padding:0 0 0 18px;
+	color:#666;
+	
+}
+#share .share_footer a:hover{
+	color:#06f;
+	opacity:0.7;
+	filter:alpha(opacity=70);/*自变色了，图片没变就在这兼容*/
+}
+#share .share_footer span{
+	display:block;
+	width:24px;
+	height:88px;
+	position:absolute;
+	top:-230px;
+	left:208px;
+	background:url(../image/share.png)no-repeat;
+	cursor:pointer;
+}
+#nav{
+	width:465px;/*465**/
+	height:55px;/*52 */
+	background: url(../image/bgg.png)  no-repeat;
+	margin:50px auto 0 auto;
+	position:relative;
+}
+
+#nav ul{
+	position:absolute;
+}
+#nav ul li{
+	width:89px;
+	height:55px;
+	line-height:55px;
+	text-align:center;
+	font-weight:bold;
+	float:left;
+}
+
+#nav ul.black{/*横向最底层的 */
+	left:10px;   
+	color:#333; 
+	z-index:1;
+}
+
+#nav ul.white{
+	width:445px;
+	color:#fff;
+	z-index:3;
+	left:0;/*换字*/
+	
+	
+}
+#nav ul.blank{
+	z-index:4;
+	left:10px;
+	cursor:pointer;
+	background:red;
+	filter:alpha(opacity=0);/*兼容IE*/
+	opacity:0;
+}
+#nav div.nav_bg{
+	
+	width:89px;
+	height:55px;
+	background:url(../image/over.png)no-repeat 0 11px;
+	position:absolute;   
+	left:10px;
+	top:0px;/* 是黑全局中*/
+	z-index:2;
+	overflow:hidden;
+	
+}
+#import{
+	clear:both;
+}
+#loading,#success{
+	position:absolute;
+	width:200px;
+	height:20px;
+	background:url(../image/loading.png);
+	border:1px solid black;
+	z-index:10000;
+	top:100px;
+	left:50px;
+	display:none;
+	
+}
+
+#loading p,#success p{
+	height:40px;
+	line-height:20px;
+	font-size:14px;
+	color:#666;
+	font-weight:bold;
+	text-indent:30px;
+	/*background:url(image/load.gif)no-repeat 5px center;
+    */
+	
+	}
