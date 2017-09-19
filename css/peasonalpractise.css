@@ -613,7 +613,7 @@ body{
 #banner ul{
 	position:absolute;
 	top:128px;
-	left:420px;//550
+	left:460px;/*//550/////////////////////////*/
 	z-index:4;
 }
 #banner ul li{
